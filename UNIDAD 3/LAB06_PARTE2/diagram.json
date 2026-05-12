@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "Armando De Jesus Avalos Castillo",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 19.8, "left": -144.6, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": -98, "left": 144, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -126.1, "left": -240.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "servo1:V+", "uno:5", "green", [ "h0" ] ],
+    [ "servo1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "servo1:PWM", "uno:11", "green", [ "h0" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v0" ] ],
+    [ "pot1:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

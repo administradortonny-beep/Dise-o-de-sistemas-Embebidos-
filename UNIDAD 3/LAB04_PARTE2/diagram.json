@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Armando De Jesus Avalos Castillo",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 39, "left": 9, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 229.1, "left": -317, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 3.95,
+      "left": 259.2,
+      "attrs": { "value": "220000" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -35.2,
+      "left": -95.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 50.4,
+      "left": -94.2,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 15.6,
+      "left": 320.6,
+      "attrs": { "color": "yellow" }
+    }
+  ],
+  "connections": [
+    [ "ldr1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "ldr1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "ldr1:AO", "uno:A1", "green", [ "h0" ] ],
+    [ "bz1:2", "uno:6", "green", [ "v0" ] ],
+    [ "bz1:1", "uno:GND.1", "green", [ "v0" ] ],
+    [ "uno:9", "r1:1", "green", [ "v0" ] ],
+    [ "led1:C", "r1:2", "green", [ "v28.8", "h106" ] ],
+    [ "led1:A", "uno:GND.3", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
